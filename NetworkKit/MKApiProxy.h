@@ -1,5 +1,5 @@
 //
-//  AFApiProxy.h
+//  MKApiProxy.h
 //  ASBasicLibrary
 //
 //  Created by Michael on 2018/12/27.
@@ -7,12 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "AFNetworkResponse.h"
+#import "MKNetworkResponse.h"
 
-typedef void(^AFNetworkResponseSuccessBlock)(AFNetworkResponse *response);
-typedef void(^AFNetworkResponseErrorBlock)(AFNetworkResponseError *error);
+typedef void(^AFNetworkResponseSuccessBlock)(MKNetworkResponse *response);
+typedef void(^AFNetworkResponseErrorBlock)(MKNetworkResponseError *error);
 
-@interface AFApiProxy : NSObject
+@interface MKApiProxy : NSObject
 
 + (instancetype)sharedInstance;
 

@@ -1,23 +1,23 @@
 //
-//  AFApiProxy.m
+//  MKApiProxy.m
 //  ASBasicLibrary
 //
 //  Created by Michael on 2018/12/27.
 //  Copyright © 2018 Aspire. All rights reserved.
 //
 
-#import "AFApiProxy.h"
+#import "MKApiProxy.h"
 #import "AFNetworking/AFNetworking.h"
 #import "MJExtension/NSObject+MJKeyValue.h"
 
-@interface AFApiProxy()
+@interface MKApiProxy()
 
 @property (nonatomic, strong) AFHTTPSessionManager *sessionManager;
 @property (nonatomic, strong) NSMutableDictionary *taskTable;
 
 @end
 
-@implementation AFApiProxy
+@implementation MKApiProxy
 
 #pragma mark - setters and getters
 - (NSMutableDictionary *)taskTable {
@@ -41,9 +41,9 @@
 #pragma mark - life cycle
 + (instancetype)sharedInstance {
     static dispatch_once_t onceToken;
-    static AFApiProxy *sharedInstance = nil;
+    static MKApiProxy *sharedInstance = nil;
     dispatch_once(&onceToken, ^{
-        sharedInstance = [[AFApiProxy alloc] init];
+        sharedInstance = [[MKApiProxy alloc] init];
     });
     return sharedInstance;
 }
@@ -54,12 +54,12 @@
     dataTask = [self.sessionManager dataTaskWithRequest:request uploadProgress:nil downloadProgress:nil completionHandler:^(NSURLResponse * _Nonnull response, id  _Nullable responseObject, NSError * _Nullable error) {
         NSNumber *requestID = @([dataTask taskIdentifier]);
         [self.taskTable removeObjectForKey:requestID];
-        AFNetworkResponse *result = nil;
+        MKNetworkResponse *result = nil;
         if (error) {
-            AFNetworkResponseError *err = [[AFNetworkResponseError alloc] initWithCode:error.code message:error.localizedDescription];
+            MKNetworkResponseError *err = [[MKNetworkResponseError alloc] initWithCode:error.code message:error.localizedDescription];
             fail ? fail(err) : nil;
         } else {
-            result = [AFNetworkResponse mj_objectWithKeyValues:responseObject];
+            result = [MKNetworkResponse mj_objectWithKeyValues:responseObject];
             if (result.error) {
                 fail ? fail(result.error) : nil;
             } else {

@@ -1,5 +1,5 @@
 //
-//  AFNetworkResponseError.h
+//  MKNetworkResponseError.h
 //  ASBasicLibrary
 //
 //  Created by Michael on 2019/1/2.
@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface AFNetworkResponseError : NSObject
+@interface MKNetworkResponseError : NSObject
 
 @property (nonatomic, assign, readonly) NSInteger code;
 @property (nonatomic, copy, readonly) NSString *message;

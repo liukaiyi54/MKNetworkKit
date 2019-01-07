@@ -6,25 +6,25 @@
 //  Copyright © 2019 Aspire. All rights reserved.
 //
 
-#import "AFNetworkBaseEngine.h"
+#import "MKNetworkBaseEngine.h"
 #import <AFNetworking/AFNetworking.h>
 
-@interface AFNetworkBaseEngine()
+@interface MKNetworkBaseEngine()
 
 @property (nonatomic, strong) NSMutableArray *requestIDList;
 @property (nonatomic, strong) AFHTTPRequestSerializer *httpRequestSerializer;
 
 @end
 
-@implementation AFNetworkBaseEngine
+@implementation MKNetworkBaseEngine
 
 #pragma mark - life cycle
 - (instancetype)init {
     self = [super init];
     if (self) {
         _delegate = nil;
-        if ([self conformsToProtocol:@protocol(AFNetworkBaseEngineDataSource)]) {
-            self.dataSource = (id <AFNetworkBaseEngineDataSource>)self;
+        if ([self conformsToProtocol:@protocol(MKNetworkBaseEngineDataSource)]) {
+            self.dataSource = (id <MKNetworkBaseEngineDataSource>)self;
         } else {
             NSException *exception = [[NSException alloc] init];
             @throw exception;
@@ -74,9 +74,9 @@
     
     NSMutableURLRequest *request = [self.httpRequestSerializer requestWithMethod:method URLString:self.dataSource.requestUrl parameters:params error:nil];
     
-    NSNumber *requestID = [[AFApiProxy sharedInstance] callApiWithRequest:request onSuccess:^(AFNetworkResponse *response) {
+    NSNumber *requestID = [[MKApiProxy sharedInstance] callApiWithRequest:request onSuccess:^(MKNetworkResponse *response) {
         [self successOnResponse:response];
-    } onFail:^(AFNetworkResponseError *error) {
+    } onFail:^(MKNetworkResponseError *error) {
         [self failWithError:error];
     }];
     
@@ -84,12 +84,12 @@
 }
 
 - (void)cancelAllRequests {
-    [[AFApiProxy sharedInstance] cancelRequestWithRequestIDList:self.requestIDList];
+    [[MKApiProxy sharedInstance] cancelRequestWithRequestIDList:self.requestIDList];
     [self.requestIDList removeAllObjects];
 }
 
 - (void)cancelRequestWithRequestID:(NSInteger)requestID {
-    [[AFApiProxy sharedInstance] cancelRequestWithRequestID:@(requestID)];
+    [[MKApiProxy sharedInstance] cancelRequestWithRequestID:@(requestID)];
 }
 
 #pragma mark - private methods
@@ -102,13 +102,13 @@
 }
 
 #pragma mark - API callbacks
-- (void)successOnResponse:(AFNetworkResponse *)response {
+- (void)successOnResponse:(MKNetworkResponse *)response {
     if ([self.delegate respondsToSelector:@selector(requestDidSuccessWithResponse:)]) {
         [self.delegate requestDidSuccessWithResponse:response];
     }
 }
 
-- (void)failWithError:(AFNetworkResponseError *)error {
+- (void)failWithError:(MKNetworkResponseError *)error {
     if ([self.delegate respondsToSelector:@selector(requestDidFailWithError:)]) {
         [self.delegate requestDidFailWithError:error];
     }

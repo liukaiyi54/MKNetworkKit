@@ -16,12 +16,11 @@
 		4C69896F21E2FEA90068B714 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C69896E21E2FEA90068B714 /* main.m */; };
 		4C69897921E2FEA90068B714 /* MKNetworkKitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C69897821E2FEA90068B714 /* MKNetworkKitTests.m */; };
 		4C69898421E2FEA90068B714 /* MKNetworkKitUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C69898321E2FEA90068B714 /* MKNetworkKitUITests.m */; };
-		4C6989DE21E300660068B714 /* AFNetworkBaseEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C69899521E300650068B714 /* AFNetworkBaseEngine.m */; };
-		4C6989DF21E300660068B714 /* AFRegisterDeviceEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C69899621E300650068B714 /* AFRegisterDeviceEngine.m */; };
-		4C6989EB21E300660068B714 /* AFNetworkConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C6989AE21E300650068B714 /* AFNetworkConstants.m */; };
-		4C6989EC21E300660068B714 /* AFNetworkResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C6989B221E300650068B714 /* AFNetworkResponse.m */; };
-		4C6989ED21E300660068B714 /* AFNetworkResponseError.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C6989B321E300650068B714 /* AFNetworkResponseError.m */; };
-		4C6989FF21E300660068B714 /* AFApiProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C6989DD21E300650068B714 /* AFApiProxy.m */; };
+		4C6989DE21E300660068B714 /* MKNetworkBaseEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C69899521E300650068B714 /* MKNetworkBaseEngine.m */; };
+		4C6989DF21E300660068B714 /* MKRegisterDeviceEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C69899621E300650068B714 /* MKRegisterDeviceEngine.m */; };
+		4C6989EC21E300660068B714 /* MKNetworkResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C6989B221E300650068B714 /* MKNetworkResponse.m */; };
+		4C6989ED21E300660068B714 /* MKNetworkResponseError.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C6989B321E300650068B714 /* MKNetworkResponseError.m */; };
+		4C6989FF21E300660068B714 /* MKApiProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C6989DD21E300650068B714 /* MKApiProxy.m */; };
 		5289C2972CE98460A9902CA5 /* libPods-MKNetworkKitTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0785B87F3CDB00AF6AED4192 /* libPods-MKNetworkKitTests.a */; };
 		E088D58F7A8DC93D84D7BAB3 /* libPods-MKNetworkKitUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F669CAF5B364B919A9E204C5 /* libPods-MKNetworkKitUITests.a */; };
 /* End PBXBuildFile section */
@@ -64,18 +63,17 @@
 		4C69897F21E2FEA90068B714 /* MKNetworkKitUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MKNetworkKitUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C69898321E2FEA90068B714 /* MKNetworkKitUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MKNetworkKitUITests.m; sourceTree = "<group>"; };
 		4C69898521E2FEA90068B714 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4C69899321E300650068B714 /* AFNetworkBaseEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworkBaseEngine.h; sourceTree = "<group>"; };
-		4C69899421E300650068B714 /* AFRegisterDeviceEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFRegisterDeviceEngine.h; sourceTree = "<group>"; };
-		4C69899521E300650068B714 /* AFNetworkBaseEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFNetworkBaseEngine.m; sourceTree = "<group>"; };
-		4C69899621E300650068B714 /* AFRegisterDeviceEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFRegisterDeviceEngine.m; sourceTree = "<group>"; };
-		4C6989AE21E300650068B714 /* AFNetworkConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFNetworkConstants.m; sourceTree = "<group>"; };
-		4C6989AF21E300650068B714 /* AFApiProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFApiProxy.h; sourceTree = "<group>"; };
-		4C6989B021E300650068B714 /* AFNetworkConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworkConstants.h; sourceTree = "<group>"; };
-		4C6989B221E300650068B714 /* AFNetworkResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFNetworkResponse.m; sourceTree = "<group>"; };
-		4C6989B321E300650068B714 /* AFNetworkResponseError.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFNetworkResponseError.m; sourceTree = "<group>"; };
-		4C6989B421E300650068B714 /* AFNetworkResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworkResponse.h; sourceTree = "<group>"; };
-		4C6989B521E300650068B714 /* AFNetworkResponseError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworkResponseError.h; sourceTree = "<group>"; };
-		4C6989DD21E300650068B714 /* AFApiProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFApiProxy.m; sourceTree = "<group>"; };
+		4C69899321E300650068B714 /* MKNetworkBaseEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKNetworkBaseEngine.h; sourceTree = "<group>"; };
+		4C69899421E300650068B714 /* MKRegisterDeviceEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKRegisterDeviceEngine.h; sourceTree = "<group>"; };
+		4C69899521E300650068B714 /* MKNetworkBaseEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKNetworkBaseEngine.m; sourceTree = "<group>"; };
+		4C69899621E300650068B714 /* MKRegisterDeviceEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKRegisterDeviceEngine.m; sourceTree = "<group>"; };
+		4C6989AF21E300650068B714 /* MKApiProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKApiProxy.h; sourceTree = "<group>"; };
+		4C6989B221E300650068B714 /* MKNetworkResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKNetworkResponse.m; sourceTree = "<group>"; };
+		4C6989B321E300650068B714 /* MKNetworkResponseError.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKNetworkResponseError.m; sourceTree = "<group>"; };
+		4C6989B421E300650068B714 /* MKNetworkResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKNetworkResponse.h; sourceTree = "<group>"; };
+		4C6989B521E300650068B714 /* MKNetworkResponseError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKNetworkResponseError.h; sourceTree = "<group>"; };
+		4C6989DD21E300650068B714 /* MKApiProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKApiProxy.m; sourceTree = "<group>"; };
+		4C698A0021E32B9D0068B714 /* MKNetworkConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MKNetworkConfig.h; sourceTree = "<group>"; };
 		58C387A1649E19E106EA7720 /* Pods-MKNetworkKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MKNetworkKit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MKNetworkKit/Pods-MKNetworkKit.debug.xcconfig"; sourceTree = "<group>"; };
 		C364BD83C9CD53B3B1D304CC /* libPods-MKNetworkKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MKNetworkKit.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E20F56694C39C61D73525F08 /* Pods-MKNetworkKitTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MKNetworkKitTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MKNetworkKitTests/Pods-MKNetworkKitTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -174,10 +172,9 @@
 				4C69899221E300650068B714 /* NetworkEngines */,
 				4C6989B121E300650068B714 /* AFNetworkResponse */,
 				4C6989DC21E300650068B714 /* ServerAPI */,
-				4C6989AF21E300650068B714 /* AFApiProxy.h */,
-				4C6989DD21E300650068B714 /* AFApiProxy.m */,
-				4C6989B021E300650068B714 /* AFNetworkConstants.h */,
-				4C6989AE21E300650068B714 /* AFNetworkConstants.m */,
+				4C6989AF21E300650068B714 /* MKApiProxy.h */,
+				4C6989DD21E300650068B714 /* MKApiProxy.m */,
+				4C698A0021E32B9D0068B714 /* MKNetworkConfig.h */,
 			);
 			path = NetworkKit;
 			sourceTree = "<group>";
@@ -185,10 +182,10 @@
 		4C69899221E300650068B714 /* NetworkEngines */ = {
 			isa = PBXGroup;
 			children = (
-				4C69899321E300650068B714 /* AFNetworkBaseEngine.h */,
-				4C69899521E300650068B714 /* AFNetworkBaseEngine.m */,
-				4C69899421E300650068B714 /* AFRegisterDeviceEngine.h */,
-				4C69899621E300650068B714 /* AFRegisterDeviceEngine.m */,
+				4C69899321E300650068B714 /* MKNetworkBaseEngine.h */,
+				4C69899521E300650068B714 /* MKNetworkBaseEngine.m */,
+				4C69899421E300650068B714 /* MKRegisterDeviceEngine.h */,
+				4C69899621E300650068B714 /* MKRegisterDeviceEngine.m */,
 			);
 			path = NetworkEngines;
 			sourceTree = "<group>";
@@ -196,10 +193,10 @@
 		4C6989B121E300650068B714 /* AFNetworkResponse */ = {
 			isa = PBXGroup;
 			children = (
-				4C6989B421E300650068B714 /* AFNetworkResponse.h */,
-				4C6989B221E300650068B714 /* AFNetworkResponse.m */,
-				4C6989B521E300650068B714 /* AFNetworkResponseError.h */,
-				4C6989B321E300650068B714 /* AFNetworkResponseError.m */,
+				4C6989B421E300650068B714 /* MKNetworkResponse.h */,
+				4C6989B221E300650068B714 /* MKNetworkResponse.m */,
+				4C6989B521E300650068B714 /* MKNetworkResponseError.h */,
+				4C6989B321E300650068B714 /* MKNetworkResponseError.m */,
 			);
 			path = AFNetworkResponse;
 			sourceTree = "<group>";
@@ -436,14 +433,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4C6989DF21E300660068B714 /* AFRegisterDeviceEngine.m in Sources */,
+				4C6989DF21E300660068B714 /* MKRegisterDeviceEngine.m in Sources */,
 				4C69896421E2FEA80068B714 /* ViewController.m in Sources */,
 				4C69896F21E2FEA90068B714 /* main.m in Sources */,
-				4C6989FF21E300660068B714 /* AFApiProxy.m in Sources */,
-				4C6989EC21E300660068B714 /* AFNetworkResponse.m in Sources */,
-				4C6989EB21E300660068B714 /* AFNetworkConstants.m in Sources */,
-				4C6989ED21E300660068B714 /* AFNetworkResponseError.m in Sources */,
-				4C6989DE21E300660068B714 /* AFNetworkBaseEngine.m in Sources */,
+				4C6989FF21E300660068B714 /* MKApiProxy.m in Sources */,
+				4C6989EC21E300660068B714 /* MKNetworkResponse.m in Sources */,
+				4C6989ED21E300660068B714 /* MKNetworkResponseError.m in Sources */,
+				4C6989DE21E300660068B714 /* MKNetworkBaseEngine.m in Sources */,
 				4C69896121E2FEA70068B714 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

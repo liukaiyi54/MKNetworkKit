@@ -1,30 +1,30 @@
 //
-//  AFRegisterDeviceEngine.m
+//  MKRegisterDeviceEngine.m
 //  ASBasicLibrary
 //
 //  Created by Michael on 2019/1/4.
 //  Copyright © 2019 Aspire. All rights reserved.
 //
 
-#import "AFRegisterDeviceEngine.h"
+#import "MKRegisterDeviceEngine.h"
 
 #include <sys/types.h>
 #include <sys/sysctl.h>
 
-@implementation AFRegisterDeviceEngine
+@implementation MKRegisterDeviceEngine
 
 - (void)registerOnSuccess:(void (^)())success onError:(void (^)(NSInteger code, NSString *message))error {
     [self loadData];
 }
 
 #pragma mark - delegate
-- (void)requestDidFailWithError:(AFNetworkResponseError *)error {
+- (void)requestDidFailWithError:(MKNetworkResponseError *)error {
     if (error) {
         NSLog(@"%@",error.message);
     }
 }
 
-- (void)requestDidSuccessWithResponse:(AFNetworkResponse *)response {
+- (void)requestDidSuccessWithResponse:(MKNetworkResponse *)response {
     if (response) {
         NSLog(@"%@", response);
     }

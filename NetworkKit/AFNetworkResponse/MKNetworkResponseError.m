@@ -1,14 +1,14 @@
 //
-//  AFNetworkResponseError.m
+//  MKNetworkResponseError.m
 //  ASBasicLibrary
 //
 //  Created by Michael on 2019/1/2.
 //  Copyright © 2019 Aspire. All rights reserved.
 //
 
-#import "AFNetworkResponseError.h"
+#import "MKNetworkResponseError.h"
 
-@implementation AFNetworkResponseError
+@implementation MKNetworkResponseError
 
 - (instancetype)init {
     return [self initWithCode:0 message:nil];

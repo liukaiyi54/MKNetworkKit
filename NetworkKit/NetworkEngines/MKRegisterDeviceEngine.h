@@ -1,14 +1,14 @@
 //
-//  AFRegisterDeviceEngine.h
+//  MKRegisterDeviceEngine.h
 //  ASBasicLibrary
 //
 //  Created by Michael on 2019/1/4.
 //  Copyright © 2019 Aspire. All rights reserved.
 //
 
-#import "AFNetworkBaseEngine.h"
+#import "MKNetworkBaseEngine.h"
 
-@interface AFRegisterDeviceEngine : AFNetworkBaseEngine <AFNetworkBaseEngineDelegate, AFNetworkBaseEngineDataSource>
+@interface MKRegisterDeviceEngine : MKNetworkBaseEngine <MKNetworkBaseEngineDelegate, MKNetworkBaseEngineDataSource>
 
 - (void)registerOnSuccess:(void (^)())success onError:(void (^)(NSInteger code, NSString *message))error;
 

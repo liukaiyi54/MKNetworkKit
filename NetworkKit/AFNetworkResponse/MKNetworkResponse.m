@@ -1,14 +1,14 @@
 //
-//  AFNetworkResponse.m
+//  MKNetworkResponse.m
 //  ASBasicLibrary
 //
 //  Created by Michael on 2018/12/27.
 //  Copyright © 2018 Aspire. All rights reserved.
 //
 
-#import "AFNetworkResponse.h"
+#import "MKNetworkResponse.h"
 
-@implementation AFNetworkResponse
+@implementation MKNetworkResponse
 
 - (instancetype)init {
     return [self initWithDictionary:nil];
@@ -27,12 +27,12 @@
 
 @end
 
-@implementation AFNetworkResponse (Error)
+@implementation MKNetworkResponse (Error)
 
 + (instancetype)responseWithErrorCode:(NSInteger)code errorMessage:(NSString *)message {
-    AFNetworkResponseError *error = [[AFNetworkResponseError alloc] initWithCode:code message:message];
+    MKNetworkResponseError *error = [[MKNetworkResponseError alloc] initWithCode:code message:message];
     NSDictionary *dict = @{@"error": error};
-    AFNetworkResponse *instance = [[AFNetworkResponse alloc] initWithDictionary:dict];
+    MKNetworkResponse *instance = [[MKNetworkResponse alloc] initWithDictionary:dict];
     return instance;
 }
 
